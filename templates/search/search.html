@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>Search</title>
+<body>
+<p>You searched for "{{ query }}"; the results are listed below.</p>
+<ul>
+{% for page in results %}
+<li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
