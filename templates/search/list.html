@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>My Flatpages</title>
+<body>
+<form method = "get" action="/search/">
+ <p><label for "id_q""> Search: </label>
+ <input type = "text" name="q" id="id_q" value="{{ query }}" />
+ <input type = "submit" value="Submit" /></p>
+ </form>
+
+<p>All pages</p>
+<ul>
+  {% for page in all_entries %}
+    <li><a href="{{ page.get_absolute_url }}">{{ page.title}}</a></li>
+  {% endfor %}
+</ul>
+</body>
+</html>
