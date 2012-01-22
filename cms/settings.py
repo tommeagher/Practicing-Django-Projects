@@ -1,4 +1,4 @@
-# Django settings for ultracasual project.
+# Django settings for CMS project.
 
 DEBUG = False
 TEMPLATE_DEBUG = False
@@ -86,7 +86,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'ultracasual.urls'
+ROOT_URLCONF = 'cms.urls'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -100,7 +100,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'django.contrib.flatpages',
-    'ultracasual.search',
+    'cms.search',
+    'blurg',
 )
 
 # A sample logging configuration. The only tangible logging
