@@ -62,7 +62,7 @@ class Entry(models.Model):
 
     def save(self, force_insert=False, force_update=False):
         self.body_html = markdown(self.body)
-        if self.excert:
+        if self.excerpt:
             self.excerpt_html = markdown(self.excerpt)
         super(Entry, self).save(force_insert, force_update)
 

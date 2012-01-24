@@ -101,6 +101,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.flatpages',
     'cms.search',
+    'tagging',
     'blurg',
 )
 

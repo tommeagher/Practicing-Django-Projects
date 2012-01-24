@@ -18,6 +18,8 @@ urlpatterns = patterns('',
             { 'document_root': 'Users/admin/dev/ultracasual/cms/js/tiny_mce/' }),
     url(r'^search/$', 'cms.search.views.search'),
     url(r'^list/$', 'cms.search.views.listpages'),
+    url(r'^weblog/$', 'blurg.views.entries_index'),
+    url(r'^weblog/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$', 'blurg.views.entry_detail'),
     url(r'', include('django.contrib.flatpages.urls')),
     
 )
