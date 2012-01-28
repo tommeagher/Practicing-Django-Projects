@@ -1,2 +1,0 @@
-I'm working my way through James Bennett's excellent "Practical Django Projects." 
-By the end of it, I hope to have the skeleton for my new sandbox website for a few apps I've been mulling over. Stay tuned.

@@ -1,5 +1,14 @@
 <html>
-<head> <title>testing entry template</title></head>
-<body>
-Empty, for now
+<head> <title>{{ object.title }}</title></head>
+<body><h1>{{ object.title }}</h1>
+<h3>{{ object.pub_date }}</h3>
+<p> {{ object.body_html|safe }}<p>
+<h3>{{ object.author.first_name}} {{ object.author.last_name }}</h3>
+
+<p>Category:
+{% for category in object.categories.all %}
+            {{ category.title }}
+{% endfor %}</p>
+<p>Tags: {{ object.tag }}</p>
 </body>
+</html>
