@@ -6,6 +6,8 @@ from django.db import models
 from markdown import markdown
 from tagging.fields import TagField
 
+from django.conf import settings
+
 class Category(models.Model):
     title = models.CharField(max_length=250, help_text='Maximum 250 characters.')
     slug = models.SlugField(unique=True, help_text='Suggested value automatically generated from title. Must be unique.')
@@ -72,3 +74,49 @@ class Entry(models.Model):
         return ('blurg_entry_detail', (), { 'year': self.pub_date.strftime("%Y"), 'month': self.pub_date.strftime("%b").lower(), 'day': self.pub_date.strftime("%d"), 'slug': self.slug })
     
     #get_absolute_url = models.permalink(get_absolute_url)
+    
+class Link(models.Model):
+    #Metadata
+    enable_comments = models.BooleanField(default = True)
+    post_elsewhere = models.BooleanField('Post to Pinboard', default=True, help_text='If checked, this link will be posted both to your weblog and to your pinboard account.')
+    posted_by = models.ForeignKey(User)
+    pub_date = models.DateTimeField(default=datetime.datetime.now)
+    title = models.CharField(max_length=250)
+    slug = models.SlugField(unique_for_date='pub_date', help_text='Must be unique for the publication date.')
+
+
+    #The actual link-y bits.
+    description = models.TextField(blank=True)
+    description_html = models.TextField(editable=False, blank=True)
+    via_name = models.CharField('Via', max_length=250, blank=True, help_text='The name of the person whose site you spotted the link on. Optional.')
+    via_url = models.URLField('Via URL', blank=True, help_text='The URL of the site where you spotted the link. Optional.')
+    tags = TagField()
+    url = models.URLField(unique=True)
+    
+    class Meta:
+        ordering = ['-pub_date']
+    
+    def __unicode__(self):
+        return self.title
+    
+    def save(self):
+        if not self.id and self.post_elsewhere:
+            import pinboard
+            from django.utils.encoding import smart_str
+            pin = pinboard.connect(settings.PINBOARD_USER, settings.PINBOARD_PASS)
+            pin.add(smart_str(self.url), smart_str(self.title), smart_str(self.description), smart_str(self.tags))
+        if self.description:
+            self.description_html = markdown(self.description)
+        super(Link, self).save()
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return('blurg_link_detail', (), {   'year': self.pub_date.strftime('%Y'),
+        								   'month': self.pub_date.strftime('%b').lower(), 
+        								   'day': self.pub_date.strftime('%d'), 
+        								   'slug': self.slug })
+    #get_absolute_url = models.permalink(get_absolute_url)
+    
+    
+    
+    
