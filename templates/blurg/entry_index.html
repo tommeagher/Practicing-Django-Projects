@@ -4,7 +4,7 @@
     </head>
     <body>
         <h1>Entries index</h1>
-        {% for entry in entry_list %}
+        {% for object in object_list %}
             <h2>{{ entry.title }}</h2>
             <p>Published on {{ entry.pub_date|date:"M. j, Y" }}</p>
             {% if entry.excerpt_html %}
