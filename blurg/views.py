@@ -2,12 +2,13 @@ from django.shortcuts import get_object_or_404, render_to_response
 from blurg.models import Entry, Category
 from django.views.generic.list_detail import object_list
 
+#do I still need/want this?
 def entries_index(request):
-    return render_to_response('blurg/entry_index.html', {'object_list': Entry.objects.all() })
+    return render_to_response('blurg/entry_index.html', {'object_list': Entry.live.all() })
 
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug=slug)
-    return object_list(request, queryset=category.entry_set.all(), extra_context={ 'category': category })
+    return object_list(request, queryset=category.live_entry_set.all(), extra_context={ 'category': category })
 
 #made redundant by generic view    
 #def category_list(request):

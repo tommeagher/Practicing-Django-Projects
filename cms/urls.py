@@ -18,10 +18,10 @@ urlpatterns = patterns('',
             { 'document_root': 'Users/admin/dev/ultracasual/cms/js/tiny_mce/' }),
     url(r'^search/$', 'cms.search.views.search'),
     url(r'^list/$', 'cms.search.views.listpages'),
-    url(r'^weblog/', include('blurg.urls')),
-    
-       #(r'^weblog/', include('coltrane.urls.entries')),
-    
+    (r'^weblog/categories/', include('blurg.urls.categories')),
+    (r'^weblog/links/', include('blurg.urls.links')),
+    (r'^weblog/tags/', include('blurg.urls.tags')),
+    (r'^weblog/', include('blurg.urls.entries')),
     url(r'', include('django.contrib.flatpages.urls')),
     
 )
