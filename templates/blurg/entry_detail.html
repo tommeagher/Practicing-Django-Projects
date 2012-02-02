@@ -1,6 +1,5 @@
-<html>
-<head> <title>{{ object.title }}</title></head>
-<body><h1>{{ object.title }}</h1>
+{% extends "base.html" %}
+{% block content %}
 <h3>{{ object.pub_date }}</h3>
 <p> {{ object.body_html|safe }}<p>
 <h3>{{ object.author.first_name}} {{ object.author.last_name }}</h3>
@@ -10,5 +9,4 @@
             {{ category.title }}
 {% endfor %}</p>
 <p>Tags: {{ object.tag }}</p>
-</body>
-</html>
+{% endblock %}
