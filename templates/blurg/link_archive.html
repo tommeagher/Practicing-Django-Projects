@@ -1,0 +1,19 @@
+{% extends "base_links.html" %}
+
+{% block title %}{{ block.super }} | Latest links{% endblock %}
+
+{% block content %}
+
+{% for link in latest %}
+            <h2>{{ link.title }}</h2>
+            <p>Published on {{ link.pub_date|date:"M. j, Y" }}</p>
+            {% if link.description_html %}
+                {{link.description_html|truncatewords_html:"50"|safe }}
+            {% endif %}
+            <p><a href="{{ link.get_absolute_url }}">See all the details...</a></p>
+        {% endfor %}
+{% endblock %}
+
+{% block whatis %}
+<p>This is a list of the latest {{ latest.count }} links published in my blog. </p>
+{% endblock %}

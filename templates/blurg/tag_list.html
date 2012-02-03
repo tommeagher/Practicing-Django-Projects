@@ -1,0 +1,21 @@
+{% extends "base_links.html" %}
+
+{% block title %}{{block.super}} | Tags {% endblock %}
+
+{% block content %}
+
+<ul>
+{% for tag in object_list %}
+<li>
+{{ tag.name }}: 
+##{% if tag.contenttype.entry() %}
+##{% for entry in tag.
+##<a href="{% url blurg_link_archive_month year,month|date:"b" %}">{{ category.name }}</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+{% block whatis %}
+<p>This is a list of tags used on in my blog. </p>
+{% endblock %}

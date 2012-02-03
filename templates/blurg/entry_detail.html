@@ -1,12 +1,41 @@
-{% extends "base.html" %}
+{% extends "base_entries.html" %}
+
+{% block title %}{{ block.super}} | {{ object.title }}{% endblock %}
+
 {% block content %}
-<h3>{{ object.pub_date }}</h3>
+<h2>{{ object.title }}</h2>
 <p> {{ object.body_html|safe }}<p>
 <h3>{{ object.author.first_name}} {{ object.author.last_name }}</h3>
+{% endblock %}
 
-<p>Category:
+{% block whatis %}
+<p>This is an entry posted to my blog on {{ object.pub_date|date: "F j, Y" }}.</p>
+
+{% if object.categories.count %}
+<p>This entry is part of the categor{{ object.categories.count|pluralize:"y,ies" }}
 {% for category in object.categories.all %}
-            {{ category.title }}
-{% endfor %}</p>
-<p>Tags: {{ object.tag }}</p>
+<a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+{% if forloop.last %}.{% else %}
+{% ifequal forloop.revcounter0 1 %}and {% else %}, {% endifequal %}
+{% endif %}
+{% endfor %}
+</p>
+
+{% else %}
+<p>This entry isn't part of any categories.</p>
+{% endif %}
+
+{% if object.tags.count %}
+<p>This entry is tagged with 
+{% for tag in object.tags.all %}
+<a href="{{ tag.get_absolute_url }}">{{ tag.title }}</a>
+{% if forloop.last %}.{% else %}
+{% ifequal forloop.revcounter0 1 %}and {% else %}, {% endifequal %}
+{% endif %}
+{% endfor %}
+</p>
+
+{% else %}
+<p>This entry doesn't have any tags.</p>
+{% endif %}
 {% endblock %}
