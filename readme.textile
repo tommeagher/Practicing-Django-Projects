@@ -1,5 +1,5 @@
 I'm working my way through James Bennett's excellent "Practical Django Projects." 
-By the end of it, I hope to have the skeleton for my new sandbox website for a few apps I've been mulling over. Stay tuned.
+By the end of it, I hope to have the skeleton for my new sandbox website for a few apps I've been mulling over. To start though, I'll be building just a simple weblog application.
 
-The source code for the book lives here, https://bitbucket.org/ubernostrum/practical-django-projects/src . But I imagine my code will differ significantly from it. 
-Here's the code of another reader as well: http://www.gyford.com/phil/writing/2010/01/14/django.php
+The initial source code for the book lives here, <a href="https://bitbucket.org/ubernostrum/practical-django-projects/src" target="_new">https://bitbucket.org/ubernostrum/practical-django-projects/src</a> . But I imagine my code will differ significantly from it. 
+Here's the final code of another reader as well: <a href="http://www.gyford.com/phil/writing/2010/01/14/django.php">http://www.gyford.com/phil/writing/2010/01/14/django.php</a>
