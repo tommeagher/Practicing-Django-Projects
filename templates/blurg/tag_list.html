@@ -7,15 +7,12 @@
 <ul>
 {% for tag in object_list %}
 <li>
-{{ tag.name }}: 
-##{% if tag.contenttype.entry() %}
-##{% for entry in tag.
-##<a href="{% url blurg_link_archive_month year,month|date:"b" %}">{{ category.name }}</a>
+{{ tag.name }}
 </li>
 {% endfor %}
 </ul>
 {% endblock %}
 
 {% block whatis %}
-<p>This is a list of tags used on in my blog. </p>
+<p>This is a list of the {{ object_list.count }} tags used on in my blog. </p>
 {% endblock %}

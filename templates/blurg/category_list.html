@@ -1,0 +1,16 @@
+{% extends "base_categories.html" %}
+
+{% block title %}{{ block.super }} | Categories{% endblock %}
+
+{% block content %}
+
+{% for object in object_list %}
+            <p><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></p>
+                        <p>{{ object.description }}</p>
+
+        {% endfor %}
+{% endblock %}
+
+{% block whatis %}
+<p>This is a list of the {{ object_list.count }} categories of entries published on my blog. </p>
+{% endblock %}
