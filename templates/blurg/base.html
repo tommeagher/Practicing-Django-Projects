@@ -26,8 +26,8 @@
     <h2>What is this?</h2>
     {% block whatis %}
     {% endblock %}
-   </div>
-   {% load blurg_tags %}
+   
+  {% load blurg_tags %}
    <h2>Latest entries in the weblog</h2>
    <ul>
      {% get_latest_content blurg.entry 5 as latest_entries %}

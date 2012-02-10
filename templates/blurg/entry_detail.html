@@ -1,4 +1,4 @@
-{% extends "base_entries.html" %}
+{% extends "blurg/base_entries.html" %}
 
 {% block title %}{{ block.super}} | {{ object.title }}{% endblock %}
 
@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block whatis %}
-<p>This is an entry posted to my blog on {{ object.pub_date|date: "F j, Y" }}.</p>
+<p>This is an entry posted to my blog on {{ object.pub_date|date:"F d, Y" }}.</p>
 
 {% if object.categories.count %}
 <p>This entry is part of the categor{{ object.categories.count|pluralize:"y,ies" }}

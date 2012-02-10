@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     (r'^weblog/links/', include('blurg.urls.links')),
     (r'^weblog/tags/', include('blurg.urls.tags')),
     (r'^weblog/', include('blurg.urls.entries')),
-    url(r'', include('django.contrib.flatpages.urls')),
-    
+    (r'', include('django.contrib.flatpages.urls')),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', { 'document_root': '/media' }),
+    #see how palewire does this with alternates for debugging and not
 )
