@@ -1,3 +1,0 @@
-django-tagging
-markdown
--e git://github.com/mgan59/python-pinboard.git
