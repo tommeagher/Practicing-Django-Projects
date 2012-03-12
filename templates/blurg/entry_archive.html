@@ -4,7 +4,7 @@
 
 {% block content %}
 
-{% for entry in latest %}
+    {% for entry in latest %}
             <h2>{{ entry.title }}</h2>
             <p>Published on {{ entry.pub_date|date:"M. j, Y" }}</p>
             {% if entry.excerpt_html %}
