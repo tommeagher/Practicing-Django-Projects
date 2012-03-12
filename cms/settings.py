@@ -102,7 +102,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'cms.search',
     'tagging',
-    'blurg',
+    'coltrane',
 )
 
 # A sample logging configuration. The only tangible logging

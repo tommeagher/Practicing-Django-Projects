@@ -15,22 +15,22 @@
       <h2>Navigation</h2>
       <ul id ="main-nav">
          <li id="main-nav-entries">
-            <a href="{% url blurg_entry_archive_index %}">Entries</a></li>
+            <a href="{% url coltrane_entry_archive_index %}">Entries</a></li>
          <li id="main-nav-links">
-            <a href="{% url blurg_link_archive_index %}">Links</a></li>
+            <a href="{% url coltrane_link_archive_index %}">Links</a></li>
          <li id="main-nav-categories">
-            <a href="{% url blurg_category_list %}">Categories</a></li>
+            <a href="{% url coltrane_category_list %}">Categories</a></li>
          <li id="main-nav-tags">
-            <a href="{url blurg_tag_list %}">Tags</a></li>
+            <a href="{url coltrane_tag_list %}">Tags</a></li>
     </ul>
     <h2>What is this?</h2>
     {% block whatis %}
     {% endblock %}
    </div>
-   {% load blurg_tags %}
+   {% load coltrane_tags %}
    <h2>Latest entries in the weblog</h2>
    <ul>
-     {% get_latest_content blurg.entry 5 as latest_entries %}
+     {% get_latest_content coltrane.entry 5 as latest_entries %}
      {% for entry in latest_entries %}
      <li>
        <a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a>,
@@ -40,7 +40,7 @@
   </ul>
   <h2>Latest links in the weblog</h2>
   <ul>
-  {% get_latest_content blurg.link 5 as latest_links %}
+  {% get_latest_content coltrane.link 5 as latest_links %}
   {% for link in latest_links %}
   <li>
     <a href="{{ link.get_absolute_url }}">{{ link.title }} </a>

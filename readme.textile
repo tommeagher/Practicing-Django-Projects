@@ -1,4 +1,4 @@
-I'm working my way through James Bennett's excellent "Practical Django Projects." 
+This is a work in progress (aren't they all?). I'm following along with the code in James Bennett's excellent "Practical Django Projects." 
 By the end of it, I hope to have the skeleton for my new sandbox website for a few apps I've been mulling over. To start though, I'll be building just a simple weblog application.
 
 The initial source code for the book lives here, <a href="https://bitbucket.org/ubernostrum/practical-django-projects/src" target="_new">https://bitbucket.org/ubernostrum/practical-django-projects/src</a>

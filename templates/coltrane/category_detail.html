@@ -1,0 +1,14 @@
+{% extends "coltrane/base_categories.html" %}
+
+{% block title %}{{ block.super}} | Catetories: {{ category.title }}{% endblock %}
+
+{% block content %}
+        <h1>&nbsp; Entries about {{ category.title }}</h1>
+        {% for object in object_list %}
+            {% ifchanged object.pub_date.year %}
+                    {{ object.pub_date|date:"Y" }}
+            {% endifchanged %}
+                    {{ object.pub_date|date:"N d" }}&nbsp;&nbsp;&nbsp;
+                    <a href="{{ object.get_absolute_url }}">{{ object }}</a> 
+        {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "coltrane/base_links.html" %}
+
+{% block title %}{{block.super}} | Tags {% endblock %}
+
+{% block content %}
+
+<ul>
+{% for tag in object_list %}
+<li>
+{{ tag.name }}
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+{% block whatis %}
+<p>This is a list of the {{ object_list.count }} tags used on in my blog. </p>
+{% endblock %}
