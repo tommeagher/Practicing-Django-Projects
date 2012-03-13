@@ -6,6 +6,24 @@
 <h2>{{ object.title }}</h2>
 <p> {{ object.body_html|safe }}<p>
 <h3>{{ object.author.first_name}} {{ object.author.last_name }}</h3>
+
+<h2>Comments</h2>
+{% load comments %}
+{% load markup %}
+{% get_comment_list for object as comment_list %}
+
+{% for comment in comment_list %}
+
+<p>On {{ comment.submit_date|date:"M. j, Y" }},
+{{ comment.name }} said:</p>
+
+{{ comment.comment|markdown:"safe" }}
+{% endfor %}
+
+<h2>Post a comment</h2>
+
+{% render_comment_form for object %}
+
 {% endblock %}
 
 {% block whatis %}
@@ -38,4 +56,9 @@
 {% else %}
 <p>This entry doesn't have any tags.</p>
 {% endif %}
+
+{% load comments %} 
+{% get_comment_count for object as comment_count %}
+<p>So far, this entry has {{ comment_count }} comment{{ comment_count|pluralize }}.</p>
 {% endblock %}
+

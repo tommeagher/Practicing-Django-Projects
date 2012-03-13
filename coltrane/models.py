@@ -130,6 +130,28 @@ class Link(models.Model):
         								   'slug': self.slug })
     #get_absolute_url = models.permalink(get_absolute_url)
     
-    
-    
+from akismet import Akismet
+from django.conf import settings            
+from django.contrib.comments.models import Comment
+from django.contrib.comments.signals import comment_will_be_posted
+from django.contrib.sites.models import Site
+from django.utils.encoding import smart_str
+
+def moderate_comment(sender, comment, request, **kwargs):
+    if not comment.id:
+        entry = comment.content_object
+        delta = datetime.datetime.now() - entry.pub_date
+        if delta.days > 30:
+            comment.is_public = False
+        else: 
+            akismet_api = Akismet(key=settings.AKISMET_API_KEY, blog_url="http:/%s/" %Site.objects.get_current().domain)
+            if akismet_api.verify_key():
+                akismet_data = { 'comment_type': 'comment',
+                                    'referrer': request.META['HTTP_REFERER'],
+                                    'user_ip': comment.ip_address,
+                                    'user-agent': request.META['HTTP_USER_AGENT'] }
+                if akismet_api.comment_check(smart_str(instance.comment), akismet_data, build_date=True):
+                    comment.is_public=False
+
+comment_will_be_posted.connect(moderate_comment, sender=Comment)
     

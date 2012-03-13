@@ -89,8 +89,11 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'cms.urls'
 
 INSTALLED_APPS = (
+    'cms.search',
     'django.contrib.auth',
+    'django.contrib.comments',
     'django.contrib.contenttypes',
+    'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
@@ -100,7 +103,6 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'django.contrib.flatpages',
-    'cms.search',
     'tagging',
     'coltrane',
 )
