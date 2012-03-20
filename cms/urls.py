@@ -1,8 +1,11 @@
 from django.conf.urls.defaults import patterns, include, url
-
+from coltrane.feeds import LatestEntriesFeed
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
+
+feeds = { 'entries': LatestEntriesFeed }
+
 
 urlpatterns = patterns('',
     # Examples:
@@ -23,6 +26,7 @@ urlpatterns = patterns('',
     (r'^weblog/tags/', include('coltrane.urls.tags')),
     (r'^weblog/', include('coltrane.urls.entries')),
     (r'^coments/', include('django.contrib.comments.urls')),
+    (r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', { 'feed_dict': feeds }),
     (r'', include('django.contrib.flatpages.urls')),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', { 'document_root': '/media' }),
     #see how palewire does this with alternates for debugging and not
