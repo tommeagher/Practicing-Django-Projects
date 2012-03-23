@@ -1,0 +1,783 @@
+1  ls
+2  apt-get update
+3  sudo apt-get update
+4  cd /opt/
+5  ls
+6  cd..
+7  cd ..
+8* sudo apt-get install binutils python-psycopg2 python-setuptools libgeos-3.1.0 libgeos-c1 libgdal1-1.6.0 postgresql-8.4-postgis postgresql-server-dev-8.4 haproxy nginx python2.6 python2.6-dev psmisc git-core locate ntp libxml2-dev libpcre3 libpcre3-dev
+9  apt-get search python2.7
+10  apt-get
+11  python2.6
+12  python
+13  sudo apt-get install binutils python-psycopg2 python-setuptools libgeos-3.1.0 libgeos-c1 libgdal1-1.6.0 postgresql-8.4-postgis postgresql-server-dev-8.4 haproxy nginx python2.6-dev psmisc git-core locate ntp libxml2-dev libpcre3 libpcre3-dev
+14  cd opt
+15  mkdir run
+16  sudo mkdir run
+17  sudo mkdir log
+18  cd ..
+19  chmod 755 opt/
+20  sudo chmod 755 opt
+21  cd opt
+22  cd log
+23  mkdir nginx
+24  cd ..
+25  sudo chmod -R 755 opt
+26  cd opt
+27  cd log
+28  mkdir nginx
+29  sudo mkdir nginx
+30  cd ..
+31  mkdir lock
+32  sudo mkdir lock
+33  sudo mkdir django-projects
+34  ls
+35  cd ..
+36  sudo chmod -R 777 opt
+37  cd opt
+38  ls
+39  cd log
+40  ls
+41  cd ..
+42  cd django-projects
+43  ls
+44  git clone git@bitbucket.org:project2012/project2012.git
+45  cd ..
+46  ls
+47  cd ..
+48  vim .ssh
+49  ls
+50  ls -l
+51  ls -a
+52  cd home
+53  ls
+54  cd ubuntu
+55  ls -a
+56  cd .ssh
+57  ls
+58  ssh-keygen -t rsa
+59  ls
+60  vim id_rsa
+61  vim id_rsa.pub
+62  cd ..
+63  ls
+64  cd opt
+65  cd ..
+66  cd opt
+67  ls
+68  cd django-projects
+69  ls
+70  git clone git@bitbucket.org:project2012/project2012.git
+71  ls
+72  cd project2012
+73  ls
+74  easy_install pip
+75  sudo easy_install pip
+76  pip install -r requirements.txt 
+77  cd ..
+78  cd 
+79  ls
+80  sudo adduser pj12
+81  sudo su postgres
+82  ls
+83  cd opt
+84  cd opt/
+85  cd..
+86  cd ..
+87  ls
+88  cd pj12
+89  ls
+90  cd .
+91  cd ..
+92  cd opt
+93  cd django-projects
+94  ls
+95  cd project2012
+96  ls
+97  cd pjaws
+98  nano local_settings.py
+99  python manage.py syncdb
+100  python
+101  cd
+102  $PYTHONPATH
+103  $PATH
+104  export PATH = /opt/django-projects/project2012:$PATH
+105  export PATH=/opt/django-projects/project2012:$PATH
+106  $PATH
+107  python
+108  cd ..
+109  ls
+110  cd ..
+111  ls
+112  cd usr
+113  cd sbin
+114  ls
+115  cd ..
+116  ls
+117  cd local
+118  ls
+119  local site-packages
+120  locate site-packages
+121  ls
+122  cd bin
+123  ls
+124  cd ..
+125  ls
+126  cd lib
+127  ls
+128  cd python2.6
+129  ls
+130  cd site-packages
+131  ls
+132  cd ..
+133  ls
+134  cd ..
+135  ls
+136  cd etc
+137  ls
+138  cd ..
+139  ls
+140  cd libs
+141  cd lib
+142  ls
+143  cd python2.6
+144  ls
+145  cd site-packages
+146  cd ..
+147  ls
+148  cd ..
+149  ls
+150  cd src
+151  ls
+152  cd ..
+153  cd bin
+154  ls
+155  s
+156  cd ..
+157  ls
+158  cd local
+159  ls
+160  cd lib
+161  ls
+162  cd python2.6
+163  ls
+164  cd dist-packages
+165  ls
+166  cd ..
+167  cd site-packages
+168  ls
+169  cd ..
+170  ls
+171  cd ..
+172  ls
+173  cd bin
+174  ls
+175  cd pip
+176  ls
+177  cd pip-2.6
+178  cd ..
+179  ls
+180  cd sbin
+181  ls
+182  ce ..
+183  cd ..
+184  ls
+185  cd ..
+186  ls
+187  cd ..
+188  ls
+189  cd bin
+190  ls
+191  cd ..
+192  cd lib
+193  ls
+194  cd ..
+195  cd /usr/local/
+196  ls
+197  cd lib
+198  ls
+199  cd python2.6
+200  ls
+201  cd dist-packages
+202  ls
+203  pip install django
+204  sudo pip install django
+205  python
+206  cd ..
+207  cd 
+208  ls
+209  pip install south
+210  python
+211  sudo pip install south
+212  cd ..
+213  cd opt
+214  cd django-projects
+215  ls
+216  cd project2012
+217  ls
+218  cd pjaws
+219  python manage.py syncdb
+220  $PATH
+221  cd ..
+222  cd booker
+223  ls
+224  cd ..
+225  touch __init__.py
+226  python manage.py syncdb
+227  cd ..
+228  cd project2012
+229  cd pjaws
+230  python manage.py syncdb
+231  ls
+232  python
+233  ls
+234  cd ..
+235  ls
+236  cd pjaws
+237  nano settings.py
+238  python
+239  export PATH=/opt/django-projects/project2012:$PATH
+240  python
+241  export PATH=/opt/django-projects/project2012/booker:$PATH
+242  python
+243  export PYTHONPATH=/opt/django-projects/project2012:$PYTHONPATH
+244  python
+245  python manage.py syncdb
+246  sudo su postgres
+247  cd
+248  cd ..
+249  ls
+250  cd ..
+251  ls
+252  find . -name "pg_hba.conf"
+253  cd ./etc/postgresql/8.4/main/pg_hba.conf
+254  cd ./etc/postgres/8.4/main/
+255  cd etc
+256  cd postgres/8.4/main/
+257  cd postgres
+258  ls
+259  cd postgresql
+260  cd 8.4
+261  cd main
+262  ls
+263  sudo nano pg_hba.conf
+264  sudo service postgresql restart
+265  sudo service postgres restart
+266  ps aux
+267  ps aux | grep
+268  ps aux | grep postgres
+269  sudo /etc/init.d/postgresql-8.4 restart
+270  psql
+271  psql -U pj12 pj12
+272  psql -U pj12 pj12 -p
+273  psql -U pj12 pj12 --help
+274  psql -U pj12 pj12 -W
+275  sudo su postgres
+276  sudo su pj12
+277  sudo nano pg_hba.conf
+278  sudo /etc/init.d/postgresql-8.4 restart
+279  sudo nano pg_hba.conf
+280  sudo /etc/init.d/postgresql-8.4 start
+281  psql -U pj12 pj12 -W
+282  sudo nano pg_hba.conf
+283  sudo /etc/init.d/postgresql-8.4 start
+284  psql -U pj12 pj12
+285  psq
+286  psql
+287  psql -U postgres
+288  sudo /etc/init.d/postgresql-8.4 start
+289  sudo nano pg_hba.conf
+290  sudo /etc/init.d/postgresql-8.4 restart
+291  psql -U postgres
+292  psql -U pj12 pj12
+293  cd ..
+294  cd opt
+295  cd django-projects
+296  cd pjaws
+297  cd project2012
+298  cd pjaws
+299  ls
+300  python manage.py syncdb
+301  cd ..
+302  cd postgres/8.4/main/
+303  cd etc/postgres/8.4/main/
+304  cd /etc/postgres/8.4/main
+305  cd 
+306  cd etc
+307  cd ..
+308  cd etc
+309  cd postgres/8.4/main
+310  ls
+311  cd postgres
+312  cd ..
+313  cd etc
+314  ls
+315  cd postgresql
+316  cd 8.4
+317  cd main
+318  ls
+319  nano pg_hba.conf
+320  sudo nano pg_hba.conf
+321  ls
+322  cd
+323  ls
+324  cd 
+325  cd opt
+326  cd ..
+327  cd opt
+328  cd ..
+329  cd opt
+330  ls
+331  apt-get install uwsgi
+332  sudo apt-get install uwsgi
+333  wget http://projects.unbit.it/downloads/uwsgi-0.9.6.4.tar.gz
+334  tar -xzf uwsgi-0.9.6.4.tar.gz
+335  ls
+336  cd uwsgi-0.9.6.4
+337  ls
+338  make
+339  ./uwsgi
+340  service
+341  ls
+342  ls -l
+343  cd uwsgi
+344  cp uwsgi /usr/sbin
+345  sudo cp uwsgi /usr/sbin
+346  uwsgi
+347  cd ..
+348  ls
+349  nginx -v
+350  apt-get uninstall nginx
+351  sudo apt-get remove nginx
+352  wget http://nginx.org/download/nginx-1.0.12.tar.gz
+353  ls
+354  tar -xf nginx-1.0.12.tar.gz 
+355  cd nginx-1.0.12/
+356  ls
+357  ./configure
+358  make
+359  make install
+360  sudo make install
+361  nginx -v
+362  ls
+363  cd /usr/bin
+364  ls
+365  nginx
+366  cd ..
+367  cd sbin
+368  nginx
+369  ls
+370  cd /opt/
+371  ls
+372  cd nginx-1.0.12/
+373  ls
+374  cd src
+375  ls
+376  cd /usr/local/nginx
+377  ls
+378  cd sbin
+379  ls
+380  ln -s
+381  ln -s /usr/local/nginx/sbin/nginx
+382  ln -s /usr/local/nginx/sbin/nginx /usr/local/sbin
+383  sudo ln -s /usr/local/nginx/sbin/nginx /usr/local/sbin/
+384  cd
+385  nginx -v
+386  cd /usr/local/nginx/sbin
+387  mv nginx ../sbin/
+388  rm nginx
+389  ls
+390  sudo ln -s /usr/local/nginx/sbin/nginx /usr/sbin/
+391  nginx
+392  cd
+393  nginx
+394  ls
+395  cd opt
+396  cd ..
+397  cd opt
+398  ls
+399  mkdir git
+400  cd git
+401  git clone git@github.com:jeremyjbowers/server-confs.git
+402  less ~/.ssh
+403  less ~/.ssh/id_rsa.pub
+404  git clone git@github.com:jeremyjbowers/server-confs.git
+405  ls
+406  cd server-confs/
+407  ls
+408  cd confs
+409  ls
+410  cd nginx
+411  ls
+412  sudo nano nginx.conf 
+413  ls
+414  cd /usr/local/nginx/conf/
+415  ls
+416  mv nginx.conf nginx.conf.back
+417  sudo mv nginx.conf nginx.conf.back
+418  cp /opt/git/server-confs/confs/nginx/nginx.conf .
+419  sudo cp /opt/git/server-confs/confs/nginx/nginx.conf .
+420  ls
+421  cd /opt/git/server-confs/
+422  cd confs
+423  ls
+424  cd ..
+425  cd /usr/local/
+426  ls
+427  mkdir uwsgi
+428  sudo mkdir uwsgi
+429  cd uwsgi
+430  touch project2012.json
+431  sudo touch project2012.json
+432  sudo nano project2012.json 
+433  less /usr/local/nginx/conf/nginx.conf
+434  sudo nano project2012.json 
+435  python
+436  sudo nano project2012.json
+437  uwsgi
+438  uwsgi --json /usr/local/uwsgi/project2012.json 
+439  sudo apt-get install jansson
+440  cd
+441  cd ..
+442  ls
+443  cd opt
+444  cd django-projects/
+445  ls
+446  history > history_commands.txt
+447  cd ..
+448  ls
+449  wget http://www.digip.org/jansson/releases/jansson-2.3.tar.gz
+450  tar -xf jansson-2.3.tar.gz 
+451  cd jansson-2.3/
+452  ls
+453  ./install-sh
+454  ./configure
+455  make
+456  make install
+457  sudo make install
+458  cd ..
+459  ls
+460  cd uwsgi-0.9.6.4/
+461  ls
+462  sudo nano uwsgiconfig.py 
+463  ./configure
+464  make
+465  ./uwsgi --json
+466  ls
+467  cd ..
+468  ls
+469  cd git
+470  ls
+471  cd ..
+472  cd uwsgi-0.9.6.4/
+473  ls
+474  cd ..
+475  ls
+476  rmdir -r uwsgi-0.9.6.4/
+477  sudo rm -r uwsgi-0.9.6.4
+478  ls
+479  wget http://projects.unbit.it/downloads/uwsgi-1.0.4.tar.gz
+480  tar -xf uwsgi-1.0.4.tar.gz 
+481  ls
+482  cd uwsgi-1.0.4/
+483  ls
+484  ./configure
+485  make
+486  ./uwsgi --json
+487  sudo ./uwsgi --json
+488  cp uwsgi /usr/bin/uwsgi
+489  sudo cp uwsgi /usr/bin/
+490  uwsgi
+491  cd .
+492  /usr/
+493  ls
+494  cd /usr
+495  ls
+496  cd local
+497  ls
+498  cd uwsgi
+499  ls
+500  uwsgi --json project2012.json 
+501  ls
+502  cd ..
+503  cd local
+504  cd bin
+505  ls
+506  cd .
+507  cd ..
+508  cd bin
+509  ls
+510  ./uwsgi -v
+511  which uwsgi
+512  cd /usr/sbin/uwsgi
+513  cd /usr/sbin
+514  sudo rm uwsgi 
+515  cp /usr/bin/uwsgi .
+516  sudo cp /usr/bin/uwsgi .
+517  ./uwsgi -v
+518  cd ..
+519  cd lib
+520  ls
+521  cd /opt/
+522  ls
+523  cd jansson-2.3/
+524  ls
+525  cd doc
+526  ls
+527  cd ..
+528  ls -l
+529  cd test
+530  ls
+531  cd bin
+532  ls
+533  cd ..
+534  ls
+535  make
+536  uwsgi
+537  find libjansson.so
+538  cd
+539  ls
+540  cd /
+541  ls
+542  find . -name libjansson.so
+543  cd /usr/local/lib
+544  ls
+545  cp libjansson.so.4 /usr/lib
+546  sudo cp libjansson.so.4 /usr/lib/
+547  cd ..
+548  uwsgi --json
+549  cd ..
+550  ls
+551  cd ..
+552  ls
+553  cd usr
+554  cd local
+555  cd uwsgi
+556  ls
+557  uwsgi --json project2012.json
+558  sudo nano project2012.json 
+559  vim project2012.json
+560  sudo nano project2012.json 
+561  uwsgi --json project2012.json
+562  ls
+563  cd
+564  cd /opt
+565  ls
+566  history > history.txt
+567  ls
+568  uwsgi --json /usr/local/uwsgi/project2012.json --daemonize /tmp/uwsgi.log
+569  ps
+570  ps aux
+571  ps aux | grep uwsgi
+572  nginx
+573  ls
+574  nginx
+575  sudo nginx
+576  cd /usr/local/nginx/conf/
+577  ls
+578  sudo nano nginx.conf
+579  sudo adduser http
+580  sudo nginx
+581  cd ..
+582  ls
+583  cd logs
+584  ls
+585  tail error.log 
+586  tail /tmp/uwsgi.log 
+587  cd ..
+588  ls
+589  cd uwsgi
+590  ls
+591  sudo nano project2012.json 
+592  cd /opt/var/run
+593  ls
+594  cd /opt
+595  cd var
+596  mkdir var
+597  mkdir run
+598  ls
+599  cd var
+600  ls
+601  cd run
+602  mkdir run
+603  ls
+604  pkill uwsgi
+605  ps aux | grep uwsgi
+606  kill -9 14619
+607  ps aux | grep uwsgi
+608  kill -9 14502
+609  kill -9 14620
+610  ps aux | grep uwsgi
+611  kill -9 14621
+612  kill -9 14622
+613  kill -9 14623
+614  ps aux | grep uwsgi
+615  kill -9 14624
+616  kill -9 14625
+617  kill -9 14626
+618  kill -9 14635
+619  ps aux | grep uwsgi
+620  uwsgi --emperor /usr/local/uwsgi/project2012.json --daemonize /tmp/uwsgi.log
+621  ps aux | grep uwsgi
+622  cd run
+623  ls
+624  ps aux | grep nginx
+625  pkill nginx
+626  sudo pkill nginx
+627  ps aux | grep nginx
+628  sudo nginx
+629  tail error.log 
+630  cd ..
+631  cd /usr/local/nginx
+632  ls
+633  cd logs
+634  tail error.log 
+635  pkill uwsgi
+636  pkill nginx
+637  sudo pkill nginx
+638  ps aux | grep uwsgi
+639  ps aux | grep nginx
+640  cd ..
+641  cd local/nginx
+642  ls
+643  cd conf
+644  ls
+645  sudo nano nginx.conf
+646  cd ..
+647  ls
+648  cd uwsgi
+649  ls
+650  sudo nano project2012.json 
+651  uwsgi --emperor /usr/local/uwsgi/project2012.json --daemonize /tmp/uwsgi.log
+652  nginx
+653  sudo nginx
+654  cd /usr/local/nginx/conf
+655  ls
+656  sudo nano nginx.conf
+657  cd ..
+658  cd uwsgi
+659  ls
+660  sudo nano project2012.json 
+661  pkill nginx
+662  pkill uwsgi
+663  ps aux | grep nginx
+664  ps aux | grep uwsgi 
+665  uwsgi --emperor /usr/local/uwsgi/project2012.json --daemonize /tmp/uwsgi.log
+666  nginx
+667  sudo nginx
+668  ls
+669  sudo nano project2012.json
+670  cd ..
+671  cd nginx
+672  ls
+673  cd conf
+674  ls
+675  sudo nano nginx.conf
+676  sudo nginx
+677  uwsgi --emperor /usr/local/uwsgi/project2012.json --daemonize /tmp/uwsgi.log
+678  cd ..
+679  ls
+680  cd log
+681  cd logs
+682  ls
+683  tail error.log 
+684  cd ..
+685  ls
+686  cd uwsgi
+687  ls
+688  cd ..
+689  tail /tmp/uwsgi.log 
+690  ls
+691  pkill uwsgi
+692  cd ..
+693  cd opt
+694  cd django-projects
+695  ls
+696  cd project2012
+697  ls
+698  cd templates
+699  ls
+700  touch 500.html
+701  cd ..
+702  cd pjaws
+703  ls
+704  sudo settings.py
+705  sudo nano settings.py
+706  sudo nano local_settings.py
+707  sudo nano settings.py
+708  sudo nano local_settings.py
+709  sudo nano settings.py
+710  sudo nano local_settings.py
+711  ls
+712  sudo nano urls.py
+713  ls
+714  cd ..
+715  ls
+716  cd templates
+717  ls
+718  cd ..
+719  cd tempaltes
+720  ls
+721  cd templates
+722  ls
+723  cd admin
+724  ls
+725  cd ..
+726  ls
+727  uwsgi --emperor /usr/local/uwsgi/project2012.json --daemonize /tmp/uwsgi.log
+728  ls
+729  cd ..
+730  mkdir static
+731  cd django-projects
+732  cd ..
+733  cd /usr/local/nginx
+734  ls
+735  cd conf
+736  ls
+737  sudo nano nginx.conf
+738  pkill nginx
+739  sudo pkill nginx
+740  sudo nginx
+741  cd /opt/static
+742  ls
+743  touch pants.txt
+744  cd ..
+745  cd django-projects
+746  ls
+747  cd project2012
+748  ls
+749  cd pjaws
+750  ls
+751  sudo nano settings.py
+752  python manage.py collectstatic
+753  python manage.py
+754  sudo nano settings.py
+755  find static
+756  python manage.py findstatic
+757  sudo nano settings.py
+758  python
+759  cd /usr/local/
+760  cd uwsgi
+761  ls
+762  sudo nano project2012.json 
+763  export DJANGO_SETTINGS_MODULE=pjaws.settings
+764  python
+765  cd /opt/django-projects/
+766  ls
+767  cd project2012/
+768  ls
+769  cd pjaws/
+770  python manage.py collectstatic
+771  python manage.py
+772  python
+773  ls
+774  sudo nano local_settings.py
+775  python manage.py collectstatic
+776  sudo nano local_settings.py
+777  sudo nano settings.py
+778  touch /usr/local/uwsgi/project2012.json
+779  sudo touch /usr/local/uwsgi/project2012.json
+780  cd ..
+781  ls
+782  rm history.txt
+783  history > history1.txt
