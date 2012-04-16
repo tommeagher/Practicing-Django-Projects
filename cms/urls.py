@@ -1,10 +1,11 @@
 from django.conf.urls.defaults import patterns, include, url
-from coltrane.feeds import LatestEntriesFeed
+from coltrane.feeds import CategoryFeed, LatestEntriesFeed
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
-feeds = { 'entries': LatestEntriesFeed }
+feeds = { 'entries': LatestEntriesFeed,
+            'categories': CategoryFeed }
 
 
 urlpatterns = patterns('',

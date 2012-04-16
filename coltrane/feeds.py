@@ -1,7 +1,8 @@
+from django.core.exceptions import ObjectDoesNotExist
 from django.utils.feedgenerator import Atom1Feed
 from django.contrib.sites.models import Site
 from django.contrib.syndication.feeds import Feed
-from coltrane.models import Entry
+from coltrane.models import Category, Entry
 
 current_site = Site.objects.get_current()
 
@@ -27,3 +28,22 @@ class LatestEntriesFeed(Feed):
 
     def item_categories(self, item):
         return [c.title for c in item.categories.all()]
+        
+class CategoryFeed(LatestEntriesFeed):
+    def get_object(self, bits):
+        if len(bits) != 1:
+            raise ObjectDoesNotExist
+        return Category.objects.get(slug__exact=bits[0])
+        
+    def title(self, obj):
+        return "%s: Latest entries in category '%s'" % (current_site.name, obj.title)
+        
+    def description(self, obj):
+        return "%s: Latest entries in category '%s'" % (current_site.name, obj.title)
+    
+    def link(self, obj):
+        return obj.get_absolute_url()
+        
+    def items(self, obj):
+        return obj.live_entry_set()[:15]
+    
