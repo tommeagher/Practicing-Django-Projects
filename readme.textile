@@ -1,5 +1,7 @@
-This is the code I'm writing as I work my way through James Bennett's excellent "Practical Django Projects." 
+This is the code I wrote as I worked my way through James Bennett's excellent "Practical Django Projects." 
 
 To buy the book, look <a href="http://www.apress.com/9781430219385" target="_new">here at Apress</a>. 
 The initial source code for the book lives here, <a href="https://bitbucket.org/ubernostrum/practical-django-projects/src" target="_new">https://bitbucket.org/ubernostrum/practical-django-projects/src</a>
 Here's the final code of another reader as well: <a href="http://www.gyford.com/phil/writing/2010/01/14/django.php" target="_new">http://www.gyford.com/phil/writing/2010/01/14/django.php</a>
+
+This project is currently not being maintained; I haven't worked it in a few years, but will leave this repo here as a resource if I ever want to revisit.
